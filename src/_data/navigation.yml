@@ -1,2 +1,5 @@
 primary_navigation:
   navigation_links:
+    - link: /
+      title: Home
+      sub_navigation_links:
