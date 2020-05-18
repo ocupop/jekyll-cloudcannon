@@ -41,3 +41,18 @@ plugins:
 
 placeholder_image: https://via.placeholder.com/1000x1000/333333/000000?text=Placeholder
 
+navigation_links:
+  - label: Navigation Links
+    icon: link
+    value:
+      link:
+      title:
+      sub_navigation_links:
+sub_navigation_links:
+  - label: Sub Navigation Links
+    icon: link
+    value:
+      link:
+      title: 
+
+
