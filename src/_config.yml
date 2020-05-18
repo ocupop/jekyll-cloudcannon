@@ -71,6 +71,12 @@ _array_structures:
       icon: collections
       value:
         _type: gallery      
-        gallery_images:      
+        gallery_images:
+  gallery_images:
+    - label: Gallery Images
+      icon: collections
+      value:
+        image:
+        title:         
 
 
