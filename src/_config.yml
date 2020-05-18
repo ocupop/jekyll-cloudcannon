@@ -54,6 +54,23 @@ _array_structures:
       icon: link
       value:
         link:
-        title: 
+        title:
+  page_sections:
+    - label: One Column Section
+      icon: web
+      value:
+        _type: 1_column
+        section_html:
+    - label: Two Column Section
+      icon: web
+      value:
+        _type: 2_column
+        left_column_html:
+        right_column_html:
+    - label: Gallery
+      icon: collections
+      value:
+        _type: gallery      
+        gallery_images:      
 
 
