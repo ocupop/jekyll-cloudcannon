@@ -1,2 +1,14 @@
 primary_navigation:
   navigation_links:
+    - link: /
+      title: Home
+      sub_navigation_links:
+    - link: /examples/form/
+      title: Form Example
+      sub_navigation_links:
+    - link: /examples/tabs/
+      title: Tab Example
+      sub_navigation_links:
+    - link: /examples/video-background/
+      title: Video Background
+      sub_navigation_links:
