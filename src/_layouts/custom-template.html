@@ -1,0 +1,44 @@
+---
+layout: default
+---
+
+{% for section in page.page_sections %}
+  {% if section._type == '1_column' %}
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            {{ section.section_html }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}    
+  {% if section._type == '2_column' %}   
+    <section>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8">
+            {{ section.left_column_html }}
+          </div>
+          <div class="col-lg-4">
+            {{ section.right_column_html }}
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endif %}  
+  {% if section._type == 'gallery' %}
+    <section>
+      <div class="container">
+        <div class="row">
+          {% for image in section.gallery_images %}
+            <div class="col-lg-3">
+              <img src="{{ image.image }}" class="img-fluid" alt="{{ image.title }}">
+            </div>
+          {% endfor %}
+        </div>
+      </div>
+    </section>
+  {% endif %}
+{% endfor %}
