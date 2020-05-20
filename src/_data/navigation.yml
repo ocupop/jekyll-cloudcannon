@@ -12,3 +12,10 @@ primary_navigation:
     - link: /examples/video-background/
       title: Video Background
       sub_navigation_links:
+    - link: /examples/video-background/
+      title: My link title
+      sub_navigation_links:
+        - link: /examples/editable-nav/
+          title: Another link
+        - link: /
+          title: Another one
