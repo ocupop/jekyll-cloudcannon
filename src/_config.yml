@@ -44,9 +44,8 @@ placeholder_image: https://via.placeholder.com/1000x1000/333333/000000?text=Plac
 
 _array_structures:
   object:
-    -
-      label: Object
-      icon: link
-      value:
-        title:
-        url:
+    label: Object
+    icon: link
+    value:
+      title:
+      url:
