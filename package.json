@@ -16,7 +16,7 @@
   "author": "Ocupop",
   "license": "MIT",
   "dependencies": {
-    "bootstrap": "^4.5.3",
+    "bootstrap": "^5.0.0-beta1",
     "concurrently": "^5.3.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",

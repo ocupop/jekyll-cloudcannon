@@ -7,16 +7,11 @@ This project uses Gulp, Jekyll, Cloudcannon Suite. It is meant for hosting on Cl
 
 ## Daily Startup ##
 1. `cd` to project directory
-2. Start environment: `yarn start`
+2. Start environment: `yarn dev`
 3. Navigate to [http://localhost:4000/](http://localhost:4000/)
+
+## Performance / Testing ##
 
 
 ============
 
-Update project name the following files
-.ruby-gemset
-config.yml
-package.json
-README.md
-
-Generate favicon: https://favicon.io
