@@ -27,6 +27,9 @@ jobs:
           custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
       - name: Broken Link Check
         uses: technote-space/broken-link-checker-action@v2
+        with:
+          TARGET: https://ocupop.com
+          RECURSIVE: true
       - name: run Lighthouse CI
         run: |
           lhci autorun
