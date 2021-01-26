@@ -18,19 +18,15 @@ jobs:
         with:
           node-version: '12.x'
       - name: Install Global packages
-        run: npm install -g @lhci/cli@0.4.x purgecss broken-link-checker
+        run: npm install -g @lhci/cli@0.4.x purgecss
       - name: 🔨 install dependencies & build site
         uses: limjh16/jekyll-action-ts@v2
         with:
           enable_cache: true
           jekyll_src: src
-
           custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
       - name: run Lighthouse CI
         run: |
           lhci autorun
-      - name: run Link Check
-        run: |
-          blc ./dist/site -ro
         env:
           LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
