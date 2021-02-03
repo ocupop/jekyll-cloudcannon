@@ -1,9 +1,4 @@
 on:
-  # schedule:
-  #   - cron: 0 0 1 * * # run monthly
-  # repository_dispatch: # run manually
-  #   types: [check-link]
-  # push:
   repository_dispatch:
     types: ["check-links"]
 
@@ -16,7 +11,7 @@ jobs:
       - name: Broken Link Check
         uses: technote-space/broken-link-checker-action@v2
         with:
-          TARGET: https://ocupop.com # Move to environment variable
+          TARGET: https://crimson-river.cloudvent.net/ # Move to environment variable
           RECURSIVE: true
 
 # testing

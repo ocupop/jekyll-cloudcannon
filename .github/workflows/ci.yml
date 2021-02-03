@@ -1,37 +1,33 @@
-name: CI
+# name: CI
+# on:
+#   schedule:
+#     - cron: 0 0 1 * * # run monthly
+#   repository_dispatch: # run manually
+#     types: [check-link]
+#   push:
+#     branches:
+#       - main
+#   pull_request:
+#     branches:
+#       - main
+#     types: [assigned, opened, synchronize, reopened]
+# jobs:
+
 on:
-  pull_request:
-    types: [assigned, opened, synchronize, reopened]
+  repository_dispatch:
+    types: ["check-links"]
+
+name: Broken Link Check
 jobs:
-  lhci:
-    name: Lighthouse
+  check:
+    name: Broken Link Check
     runs-on: ubuntu-latest
     steps:
-      - name: 📂 setup
-        uses: actions/checkout@v2
-      - name: 💎 setup ruby
-        uses: ruby/setup-ruby@v1
-        with:
-          ruby-version: 2.6.2
-      - name: setup Node
-        uses: actions/setup-node@v1
-        with:
-          node-version: '12.x'
-      - name: Install Global packages
-        run: npm install -g @lhci/cli@0.4.x purgecss
-      - name: 🔨 install dependencies & build site
-        uses: limjh16/jekyll-action-ts@v2
-        with:
-          enable_cache: true
-          jekyll_src: src
-          custom_opts: JEKYLL_ENV=production --trace --destination ./dist/site
       - name: Broken Link Check
         uses: technote-space/broken-link-checker-action@v2
         with:
-          TARGET: https://ocupop.com
+          TARGET: https://crimson-river.cloudvent.net/ # Move to environment variable
           RECURSIVE: true
-      - name: run Lighthouse CI
-        run: |
-          lhci autorun
-        env:
-          LHCI_GITHUB_APP_TOKEN: ${{secrets.LHCI_GITHUB_APP_TOKEN}}
+
+# testing
+# curl -X POST -H "Accept: application/vnd.github.v3+json" -H "authorization: Bearer <token>" https://api.github.com/repos/ocupop/refed.com/dispatches -d '{"event_type": "check-links","client_payload": {"key1": "Hello"}}'
